@@ -134,6 +134,13 @@ O script manda os alertas para um **bot do Telegram** que você cria em 2 minuto
 Com o token e o chat_id em mãos, e a `GROQ_API_KEY` (grátis em
 [console.groq.com/keys](https://console.groq.com/keys)):
 
+Crie um arquivo local a partir do exemplo e nunca o envie para o Git:
+
+```bash
+cp .env.example .env
+chmod 600 .env
+```
+
 ```bash
 git clone https://github.com/mmaxjr/netflow-ia-colletor.git
 cd netflow-ia-colletor
@@ -187,3 +194,6 @@ PRs e sugestões são bem-vindos.
 O script salva `GROQ_API_KEY`, `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`
 em `/opt/netflow-ai/.env` com permissão `600` (só root lê). Ainda assim,
 nunca comite esse arquivo nem essas chaves no repositório Git.
+
+O repositorio inclui `.env.example` apenas com nomes de variaveis. Use esse
+arquivo como referencia e mantenha o `.env` real fora do versionamento.
